@@ -1,0 +1,255 @@
+
+
+
+body {
+  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+
+}
+
+a {
+  text-decoration: none;
+display: block;
+color: #333;
+}
+
+a:hover{
+  color: rgb(110, 110, 110);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 40px
+}
+
+
+.section {
+  padding: 90px 0;
+}
+
+
+.background {
+  background-image: url(../img/01_back.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .background {
+      background-color: #FFF;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+}
+
+
+
+.body_mb{
+  max-width: 480px ;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+/*--ボタン--*/
+.button  {
+  background: #fff;
+  border: solid 2px #666666;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 10px 10px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.btn {
+  padding: 100px 100px;
+}
+
+/*--ヘッダー--*/
+
+
+.header_logo {
+  font-size: 24px;
+  padding: 20px 30px;
+  position: fixed;
+}
+
+/*--ハンバーガーメニュー--*/
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+  position: fixed;
+  right: 0
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: rgba(234,229,227,0.9);
+  transition: .5s;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+  text-align: center;
+  line-height: 150px;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0;/* メニューを画面に入れる */
+}
+
+
+/*--タイトル--*/
+.title {
+  text-align: center;
+  padding: 80px 0;
+  padding-bottom: 20px;
+}
+
+.subtitle {
+  padding: 50px 0;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+/*MV*/
+.mv_logo_img {
+}
+
+/*--collage earthとは--*/
+.what_inner {
+  text-align: center;
+}
+
+dt {
+  float: left;
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 80px;
+}
+
+
+.title_ruby {
+  text-align: center;
+}
+.we_section {
+  background-color: #eae8e1;
+  padding-bottom: 100px;
+}
+
+.subtitle {
+  font-size: 18px;
+}
+/*--ACCES--*/
+
+
+
+
+/*--shop--*/
+.shop_section {
+  background-color: #9d8e87;
+  color: #fff;
+}
+.shop_img{
+  width: 100%;
+}
+.shop_text{
+  text-align: center;
+  padding-top: 100px;
+}
+
+/*--概要ー--*/
+.attention_listitem {
+  font-size: 12px;
+}
+dl {
+  border-top: 2px #696969  solid;
+  border-bottom:2px #696969 solid;
+  padding: 50px 0px;
+}
+
+/*--フッター--*/
+.copyright {
+  position: relative;
+  text-align: center;
+  padding: 50px;
+  bottom: 0;
+  font-size: 10px;
